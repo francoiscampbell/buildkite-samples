@@ -2,14 +2,12 @@
 steps:
   - group: "Hello"
     steps:
-      - command:
-        - sleep 10
-        - wait
-        - sleep 15
+      - command: sleep 10
+      - wait
+      - command: sleep 15
   - wait
   - group: "World"
     steps:
-      - command:
-        - sleep 20
-        - wait
-        - sleep 25
+      - command: sleep 20
+      - wait
+      - command: sleep 25
