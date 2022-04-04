@@ -1,0 +1,3 @@
+steps:
+  - command: "echo 'Running all pipelines in this repo'"
+  - command: "buildkite-agent pipeline upload 01-simple/buildkite.yml"
