@@ -1,4 +1,6 @@
 steps:
   - command: 
+    - echo "--- echo Hello"
     - echo Hello
+    - echo "--- echo World"
     - echo World
