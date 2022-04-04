@@ -1,0 +1,5 @@
+# pipeline part that only runs tests, with dynamic parallelism
+steps:
+  - command: 08-small-app/tests.sh
+    label: Tests %n
+    parallelism: $PARALLELISM

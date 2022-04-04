@@ -1,0 +1,11 @@
+# this pipeline simulates an app that has lint and parallel test runs
+steps:
+  - command: echo Running checks && sleep 10
+    label: Checks
+  - command: echo Running seed && sleep 10
+    label: Seed
+  - command: 08-small-app/dynamic-tests.sh
+    label: Split tests
+  - wait
+  - command: echo Creating release && sleep 10
+    label: Create release
