@@ -1,2 +1,5 @@
+agents:
+  queue: "${AGENT_QUEUE:-default}"
+
 steps:
   - command: ".buildkite/bootstrap.sh"
