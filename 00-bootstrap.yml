@@ -1,3 +1,3 @@
 steps:
   - command: "echo 'Running all pipelines in this repo'"
-  - command: "find . -name buildkite.yml -exec buildkite-agent pipeline upload {} \\;"
+  - command: "00-bootstrap.sh"
