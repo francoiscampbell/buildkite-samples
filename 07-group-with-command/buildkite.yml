@@ -2,8 +2,12 @@
 steps:
   - group: "Hello"
     steps:
-      - command: sleep 30 && echo Hello
-  - command: echo in between groups    
+      - command: sleep 10
+      - wait
+      - command: sleep 15
+  - command: echo 'in between groups'
   - group: "World"
     steps:
-      - command: sleep 30 && echo World
+      - command: sleep 20
+      - wait
+      - command: sleep 25
