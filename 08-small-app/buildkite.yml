@@ -1,12 +1,12 @@
 # this pipeline simulates an app that has lint and parallel test runs
 steps:
-  - command: echo Running checks
+  - command: echo Running checks && sleep 10
     label: Checks
-  - command: echo Running seed
+  - command: echo Running seed && sleep 10
     label: Seed
   - command: 08-small-app/tests.sh
     label: Tests
     parallelism: 8  
   - wait
-  - command: echo Creating release
+  - command: echo Creating release && sleep 10
     label: Create release
