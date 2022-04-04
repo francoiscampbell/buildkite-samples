@@ -1,3 +1,7 @@
+# this pipeline runs the same script three times in parallel
+# one thing i noticed is that env vars in the yaml are substituted early,
+# using $BUILDKITE_PARALLEL_JOB here results in an empty string, it has to be
+# used in a separate script
 steps:
   - command: 02-parallel/script.sh
     label: echo %n

@@ -1,4 +1,5 @@
 # this pipeline runs multiple commands in separate command blocks (concurrently)
 steps:
   - command: sleep 30 && echo Hello
+  - wait
   - command: sleep 30 && echo World

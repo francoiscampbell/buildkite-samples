@@ -1,0 +1,9 @@
+# this pipeline runs multiple commands in separate command blocks (concurrently)
+steps:
+  - group: "Hello"
+    steps:
+      - command: sleep 30 && echo Hello
+  - command: echo in between groups    
+  - group: "World"
+    steps:
+      - command: sleep 30 && echo World

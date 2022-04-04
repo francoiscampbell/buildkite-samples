@@ -1,3 +1,4 @@
+# this pipeline runs multiple commands in one command block (sequential)
 steps:
   - command: 
     - echo "--- echo Hello"
