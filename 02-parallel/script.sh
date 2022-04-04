@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Hello from job $BUILDKITE_PARALLEL_JOB / $BUILDKITE_PARALLEL_JOB_COUNT"

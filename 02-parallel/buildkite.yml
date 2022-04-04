@@ -1,4 +1,4 @@
 steps:
-  - command: "echo Hello from job \$BUILDKITE_PARALLEL_JOB / \$BUILDKITE_PARALLEL_JOB_COUNT"
+  - command: 02-parallel/script.sh
     label: echo %n
     parallelism: 3
