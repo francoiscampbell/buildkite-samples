@@ -4,7 +4,7 @@ steps:
     label: Checks
   - command: echo Running seed && sleep 10
     label: Seed
-  - command: 08-small-app/dynamic-tests.sh
+  - command: 09-small-app-dynamic-parallelism/dynamic-tests.sh
     label: Split tests
   - wait
   - command: echo Creating release && sleep 10
