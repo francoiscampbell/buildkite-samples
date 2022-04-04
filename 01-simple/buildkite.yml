@@ -1,2 +1,3 @@
+# this simple pipeline grabs an agent to run one command
 steps:
   - command: echo Hello

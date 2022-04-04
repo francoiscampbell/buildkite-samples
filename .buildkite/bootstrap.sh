@@ -5,5 +5,7 @@ if [[ ! -z "$RUN_PIPELINE" ]]; then
   buildkite-agent pipeline upload "$RUN_PIPELINE/buildkite.yml"
 else
   echo 'Running all pipelines in this repo'
-  find . -name buildkite.yml -exec buildkite-agent pipeline upload {} \;
+  for FILE in */buildkite.yml; do
+    buildkite-agent pipeline upload "$FILE"
+  done
 fi
