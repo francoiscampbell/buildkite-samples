@@ -9,6 +9,7 @@ elif [[ ! -z "$RUN_ALL" ]]; then
     buildkite-agent pipeline upload "$FILE"
   done
 else
-  echo "Running only changed pipelines"
-  git diff --name-only | grep '/buildkite.yml$' | xargs -I {} buildkite-agent pipeline upload {}
+  echo "Running only changed pipelines:"
+  git diff --name-only | grep '/buildkite.yml$'
+  git diff --name-only | grep '/buildkite.yml$' | xargs -I{} buildkite-agent pipeline upload {}
 fi
