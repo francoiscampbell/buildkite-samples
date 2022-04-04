@@ -1,4 +1,4 @@
-# this pipeline runs multiple commands in separate command blocks (concurrently)
+# this pipeline runs multiple commands in separate command blocks (sequentially)
 steps:
   - group: "Hello"
     steps:
