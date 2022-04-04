@@ -7,6 +7,5 @@ steps:
   - command: 08-small-app/dynamic-tests.sh
     label: Split tests
   - wait
-  
   - command: echo Creating release && sleep 10
     label: Create release

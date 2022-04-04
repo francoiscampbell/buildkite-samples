@@ -10,6 +10,6 @@ elif [[ ! -z "$RUN_ALL" ]]; then
   done
 else
   echo "Running only changed pipelines:"
-  git --no-pager diff --name-only HEAD~1
-  git diff --name-only | grep '/buildkite.yml$' | xargs -I{} buildkite-agent pipeline upload {}
+  git --no-pager diff --name-only HEAD~1 | grep '/buildkite.yml$'
+  git --no-pager diff --name-only HEAD~1 | grep '/buildkite.yml$' | xargs -I{} buildkite-agent pipeline upload {}
 fi
