@@ -1,0 +1,15 @@
+# this pipeline runs multiple commands in separate command blocks (concurrently)
+steps:
+  - group: "Hello"
+    steps:
+      - command:
+        - sleep 10
+        - wait
+        - sleep 15
+  - wait
+  - group: "World"
+    steps:
+      - command:
+        - sleep 20
+        - wait
+        - sleep 25
