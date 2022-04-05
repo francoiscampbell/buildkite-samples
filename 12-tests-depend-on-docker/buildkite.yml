@@ -1,0 +1,20 @@
+# this pipeline simulates an app that has docker build, lint and parallel test runs,
+# where the tests depend on the docker image being built first
+steps:
+  - group: Docker build
+    steps:
+    - command: cd 11-small-app-docker && docker build .
+      label: Docker build
+  - wait
+  - group: Tests
+    steps:
+    - command: echo Running checks && sleep 10
+      label: Checks
+    - command: echo Running seed && sleep 10
+      label: Seed
+    - command: 08-small-app/tests.sh
+      label: Tests
+      parallelism: 8
+    - wait
+    - command: echo Creating release && sleep 10
+      label: Create release
