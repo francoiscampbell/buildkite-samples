@@ -1,0 +1,7 @@
+# this pipeline simulates an app that has docker build, lint and parallel test runs,
+# where the tests depend on the docker image being built first
+steps:
+  - label: Soft-fail
+    command: exit 1
+    soft_fail:
+      - exit_status: 1
