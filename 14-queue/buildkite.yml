@@ -2,4 +2,4 @@
 steps:
   - command: echo Hello
     agents:
-      queue: franktest
+      queue: test
