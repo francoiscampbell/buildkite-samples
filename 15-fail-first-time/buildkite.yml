@@ -1,3 +1,4 @@
 # this simple pipeline grabs an agent to run one command
 steps:
   - command: '[[ "$$BUILDKITE_RETRY_COUNT" -eq 0 ]] && exit 1 || exit 0'
+  - command: 'sleep 15'  # run another on the side to test fast-fail
