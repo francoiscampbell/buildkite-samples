@@ -1,0 +1,17 @@
+# this simple pipeline grabs a macos agent to run one command
+steps:
+  - command:
+      - echo Hello
+      - whoami
+      - git config -l --show-origin
+      - echo $$HOME
+    agents:
+      queue: macos
+  - command:
+      - xcodebuild -runFirstLaunch
+      - xcrun simctl list -j devices
+      - xcrun simctl list -j devices
+    agents:
+      queue: macos
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_14.1_RC_2.app"
