@@ -10,7 +10,9 @@ steps:
       - git config -l --show-origin
       - echo $$HOME
   - label: Artifact test
-    command: echo 123 > foo
+    command:
+      - echo 123 > foo
+      - aws sts get-caller-identity
     artifact_paths:
       - foo
   - label: Xcode test
