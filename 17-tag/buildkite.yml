@@ -1,0 +1,5 @@
+# echo BUILDKITE_TAG
+steps:
+  - command: 'echo "BUILDKITE_TAG: $$BUILDKITE_TAG"'
+    agents:
+      queue: test
